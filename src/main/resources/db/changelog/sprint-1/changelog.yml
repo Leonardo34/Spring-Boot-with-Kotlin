@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-account
+      author: leonardo.morais
+      comment: Criar tabela account
+      changes:
+      - sqlFile:
+          path: account/createtable-account-ddl.sql
+          relativeToChangelogFile: true

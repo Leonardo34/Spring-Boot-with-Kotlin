@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: kotlin-microservice
+  datasource:
+    name: marketplace
+    url: jdbc:postgresql://localhost:5432/kotlin
+    username: kotlin
+    password: password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    default-schema: kotlinarticle
+    change-log: classpath:/db/changelog/db.changelog-master.yml
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    enabled: true
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        default_schema: basket
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        temp.use_jdbc_metadata_defaults: false
+#        format_sql: true
